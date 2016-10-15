@@ -48,6 +48,24 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set nu
-syntax on
+set guifont=Monaco:h14		"设置字体
 
+syntax enable				"语法高亮
+set background=dark			"背景色
+colorscheme solarized		"颜色主题
+set autoindent				"缩进风格
+set number					"显示行号
+set tabstop=4				"设置tab宽度
+set shiftwidth=4			"换行缩进
+set showmatch				"显示匹配
+set hlsearch				"高亮搜索
+set cursorline				"高亮当前行
+set wrapscan				"循环查找
+
+" 设置编码
+set fenc=utf-8                              " 设置编码
+set encoding=utf-8                          " 内部的程序识别编码
+set fileencoding=utf-8                      " 当前文件编辑时使用的文件编码
+set fileencodings=utf-8,gbk,cp936,latin-1   " gvim 打开文件是支持的编码
+set ambiwidth=double                        " 防止特殊符号无法显示
+set helplang=cn                             " 中文帮助
