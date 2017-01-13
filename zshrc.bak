@@ -87,13 +87,16 @@ source $ZSH/oh-my-zsh.sh
   alias aptsearch="sudo apt-cache search"
   alias aptupdate="sudo apt update"
   alias aptupgrade="sudo apt upgrade"
+  alias dpkginstall="sudo dpkg -i"
   alias chmod777="sudo chmod 777"
   alias chmodx="sudo chmod +x"
   alias sourcezsh="source ~/.zshrc"
   alias vimvimrc="vim ~/.vimrc"
   alias iftopwlan="sudo iftop -i wlan0"
+  alias cddvbtc="cd /home/jiang/Documents/dvbtc"
 
 #ssh
   alias sshdigital4="ssh jiang@104.131.136.115"
   alias sshdigital6="ssh jiang@2604:a880:1:20::424:7001"
   alias sshpi="ssh pi@192.168.199.205"
+  alias sshhiwifi="ssh root@192.168.199.1 -p 1022"
