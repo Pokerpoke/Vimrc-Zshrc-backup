@@ -20,14 +20,9 @@ case $BFLAG in
 		echo "Zshrc won't backup!";;
 esac
 
-# cp ~/.vimrc ./vimrc.bak
-# echo "Backup vimrc succed!"
-# cp ~/.zshrc ./zshrc.bak
-# echo "Backup zshrc succed!"
-
 git add .
 date1=$(date +%Y%m%d)
-echo "$date1"
+# echo "$date1"
 
 read -p "Input commit:" COMMIT
 
@@ -37,6 +32,5 @@ else
 	git commit -m "$COMMIT --- $date1"
 fi
 
-# git commit -m "Backup! --- $date1"
-# git push
-# echo "Git push succed!"
+git push
+echo "Git push succed!"
