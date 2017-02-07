@@ -37,6 +37,6 @@ else
 	git commit -m "$COMMIT --- $date1"
 fi
 
-git commit -m "Backup! --- $date1"
+# git commit -m "Backup! --- $date1"
 # git push
 # echo "Git push succed!"
