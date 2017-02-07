@@ -94,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
   alias vimvimrc="vim ~/.vimrc"
   alias iftopwlan="sudo iftop -i wlan0"
   alias cddvbtc="cd /home/jiang/Documents/dvbtc"
+  alias python="python3"
 
 #ssh
   alias sshdigital4="ssh jiang@104.131.136.115"
@@ -101,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
   alias sshpi="ssh pi@192.168.199.205"
   alias sshhiwifi="ssh root@192.168.199.1 -p 1022"
   alias sshpiw="ssh pi@192.168.199.243"
+
+#wifi shadowsocks
+	alias wifiss="python3 /home/jiang/Documents/wifiss/wifiss.py"
