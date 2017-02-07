@@ -8,6 +8,6 @@ echo "Backup zshrc succed!"
 git add .
 date1=$(date +%Y%m%d)
 echo "$date1"
-git commit -m "Backup $date !"
+git commit -m "Backup $date1 !"
 git push
 echo "Git push succed!"
