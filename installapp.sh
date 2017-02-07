@@ -48,6 +48,30 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
+#install htop
+read -p "install htop? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		apt-get install -y htop;;
+	N | n )
+		echo "htop won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
+#install tree
+read -p "install tree? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		apt-get install -y tree;;
+	N | n )
+		echo "tree won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
 #install shadowsocks-qt5
 read -p "install shadowsocks-qt5? [Y/N]" IFLAG
 
@@ -68,7 +92,7 @@ read -p "install shadowsocks-qt5? [Y/N]" IFLAG
 case $IFLAG in
 	Y | y )
 		sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
-		sudo apt-get update && sudo apt-get install arc-theme;;
+		apt-get update && sudo apt-get install arc-theme;;
 	N | n )
 		echo "arc-theme won't install!";;
 	* )
