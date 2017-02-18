@@ -87,7 +87,7 @@ case $IFLAG in
 esac
 
 #install arc-theme
-read -p "install shadowsocks-qt5? [Y/N]" IFLAG
+read -p "install arc-theme? [Y/N]" IFLAG
 
 case $IFLAG in
 	Y | y )
@@ -95,18 +95,6 @@ case $IFLAG in
 		apt-get update && sudo apt-get install arc-theme;;
 	N | n )
 		echo "arc-theme won't install!";;
-	* )
-		echo "error choice!";;
-esac
-
-#install oh-my-zsh
-read -p "install oh-my-zsh? [Y/N]" IFLAG
-
-case $IFLAG in
-	Y | y )
-		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";;
-	N | n )
-		echo "oh-my-zsh won't install!";;
 	* )
 		echo "error choice!";;
 esac
