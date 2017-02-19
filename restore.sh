@@ -8,4 +8,3 @@ echo "Vundle has been installed!"
 
 cp ./vimrc.bak ~/.vimrc
 echo "Restore vimrc succeed!"
-

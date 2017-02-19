@@ -20,17 +20,23 @@ case $BFLAG in
 		echo "Zshrc won't backup!";;
 esac
 
-git add .
-date1=$(date +%Y%m%d)
-# echo "$date1"
+read -p "Git push? [Y/N]" BFLAG
 
-read -p "Input commit:" COMMIT
+case $BFLAG in
+	Y | y )
+		git add .
+		date1=$(date +%Y%m%d)
 
-if [[ $COMMIT == "" ]]; then
-	git commit -m "Backup! --- $date1"
-else
-	git commit -m "$COMMIT --- $date1"
-fi
+		read -p "Input commit:" COMMIT
 
-git push
-echo "Git push succed!"
+		if [[ $COMMIT == "" ]]; then
+			git commit -m "Backup! --- $date1"
+		else
+			git commit -m "$COMMIT --- $date1"
+		fi
+
+		git push
+		echo "Git push succed!";;
+	N | n )
+		echo "Skip git push";;
+esac
