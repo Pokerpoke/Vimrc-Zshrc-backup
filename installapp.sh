@@ -16,6 +16,7 @@ apps=(
 	"uget"
 	"unity-tweak-tool"
 	"indicator-multiload"
+	"cmake"
 	)
 
 for name in ${apps[@]}; do
