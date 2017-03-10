@@ -7,7 +7,7 @@ fuser=$USER
 
 
 apps=(
-	"chromium browser"
+	"chromium\ browser"
 	"git"
 	"zsh"
 	"vim"
