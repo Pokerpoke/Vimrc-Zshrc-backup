@@ -12,6 +12,7 @@ case $IFLAG in
 		echo "error choice!"
 esac
 
+<<<<<<< HEAD
 
 # Restore zshrc
 read -p "Restore zshrc? [Y/N]" IFLAG
@@ -52,3 +53,7 @@ case $IFLAG in
 		echo "error choice!"
 esac
 
+=======
+cp ./vimrc.bak ~/.vimrc
+echo "Restore vimrc succeed!"
+>>>>>>> 45dfcf621885f9d8af4c8535b45a2e81c76030fb
