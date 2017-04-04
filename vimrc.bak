@@ -89,16 +89,16 @@ syntax on
 
 " 设置背景色
 " set background = light
-color dracula
+color molokai
 
 " 设置tab长度
 set tabstop=4
 
-"突出显示当前行"
+" 突出显示当前行
 set cursorline        
 
-"突出显示当前列"
-set cursorcolumn        
+" 突出显示当前列
+" set cursorcolumn        
 
 " 显示匹配的括号
 set showmatch
