@@ -36,7 +36,7 @@ case $BFLAG in
 			git commit -m "$COMMIT --- $date1"
 		fi
 
-		git push origin https://github.com/Pokerpoke/Vimrc-Zshrc-backup
+		git push origin https://github.com/Pokerpoke/Vimrc-Zshrc-backup.git
 
 		echo "Git push succed!";;
 	N | n )
