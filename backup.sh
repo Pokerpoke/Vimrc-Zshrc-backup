@@ -24,6 +24,8 @@ read -p "Git push? [Y/N]" BFLAG
 
 case $BFLAG in
 	Y | y )
+		git pull
+
 		git add .
 
 		date1=$(date +%Y%m%d)
@@ -36,7 +38,7 @@ case $BFLAG in
 			git commit -m "$COMMIT --- $date1"
 		fi
 
-		git push origin https://github.com/Pokerpoke/Vimrc-Zshrc-backup.git
+		git push origin
 
 		echo "Git push succed!";;
 	N | n )
