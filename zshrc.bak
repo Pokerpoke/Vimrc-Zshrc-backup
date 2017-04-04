@@ -8,7 +8,8 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="ys"
+# ZSH_THEME="ys"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -102,8 +103,11 @@ source $ZSH/oh-my-zsh.sh
   alias sshdigital6="ssh jiang@2604:a880:1:20::424:7001"
   alias sshpi="ssh pi@192.168.199.205"
   alias sshhiwifi="ssh root@192.168.199.1 -p 1022"
-  alias sshpiw="ssh pi@192.168.199.243"
+  alias sshpiyang="ssh jiang@192.168.199.144"
   alias sshypi="ssh pi@192.168.199.144"
 
 #wifi shadowsocks
   alias wifiss="python3 /home/jiang/Documents/wifiss/wifiss.py"
+
+# django
+  alias djangorunserver="python manage.py runserver 0.0.0.0:8000"

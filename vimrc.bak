@@ -14,11 +14,25 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
+
+" 状态栏
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" molokai主题
+Plugin 'tomasr/molokai'
+" 右侧目录结构
 Plugin 'scrooloose/nerdtree'
-Plugin 'nvie/vim-flake8'
-Plugin 'pangloss/vim-javascript'
-Plugin 'Raimondi/delimitMate'
+" 代码提示
+" Plugin 'Valloric/YouCompleteMe'
+" 注释
+Plugin 'scrooloose/nerdcommenter'
+" ctrlp
+Plugin 'ctrlpvim/ctrlp.vim'
+" 快速移动
+Plugin 'easymotion/vim-easymotion'
+" Dracula theme
+Plugin 'dracula/vim'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -30,7 +44,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
-Plugin 'ascenator/L9', {'name': 'newL9'}
+" Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,31 +59,46 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
+
 " Put your non-Plugin stuff after this line
 
-set guifont=Monaco:h14		"设置字体
+" F5 to open NERDTree
+nmap <F5> :NERDTreeToggle<cr>
 
-syntax enable				"语法高亮
-"set background=dark			"背景色
-"colorscheme solarized		"颜色主题
-set autoindent				"缩进风格
-set number					"显示行号
-set tabstop=4				"设置tab宽度
-set shiftwidth=4			"换行缩进
-set showmatch				"显示匹配
-set hlsearch				"高亮搜索
-set cursorline				"高亮当前行
-set wrapscan				"循环查找
+" 显示行号
+set nu
 
-" 设置编码
-set fenc=utf-8                              " 设置编码
-set encoding=utf-8                          " 内部的程序识别编码
-set fileencoding=utf-8                      " 当前文件编辑时使用的文件编码
-set fileencodings=utf-8,gbk,cp936,latin-1   " gvim 打开文件是支持的编码
-set ambiwidth=double                        " 防止特殊符号无法显示
-set helplang=cn                             " 中文帮助
+" 设置airline主题
+let g:airline_theme='molokai'
 
-Bundle 'altercation/vim-colors-solarized'
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
+" ctrl + p
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" 注释的时候自动加个空格, 强迫症必配
+let g:NERDSpaceDelims=1
+
+" 设置缩进
+set smartindent
+
+" 语法高亮
+syntax on
+
+" solarized主题设置在终端下的设置
+" let g:solarized_termcolors=256
+
+" 设置背景色
+" set background = light
+color dracula
+
+" 设置tab长度
+set tabstop=4
+
+"突出显示当前行"
+set cursorline        
+
+"突出显示当前列"
+set cursorcolumn        
+
+" 显示匹配的括号
+set showmatch

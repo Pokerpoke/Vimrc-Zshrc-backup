@@ -17,6 +17,7 @@ apps=(
 	"unity-tweak-tool"
 	"indicator-multiload"
 	"cmake"
+	"powerline"
 	)
 
 for name in ${apps[@]}; do
@@ -77,6 +78,26 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
+#install powerline fonts
+read -p "install powerline fonts? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		# clone
+		git clone https://github.com/powerline/fonts.git
+		# install
+		cd fonts
+		./install.sh
+		# clean-up a bit
+		cd ..
+		rm -rf fonts
+		echo "install success!";;
+	N | n )
+		echo "sublimetext3 won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
 #install oh-my-zsh
 read -p "install oh-my-zsh? [Y/N]" IFLAG
 
@@ -88,6 +109,5 @@ case $IFLAG in
 	* )
 		echo "error choice";;
 esac
-
 
 exit 0
