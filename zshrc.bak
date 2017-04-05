@@ -111,3 +111,6 @@ source $ZSH/oh-my-zsh.sh
 
 # django
   alias djangorunserver="python manage.py runserver 0.0.0.0:8000"
+
+# cd dirs
+  alias cddvbt="cd /home/jiang/Documents/git/dvbtc"

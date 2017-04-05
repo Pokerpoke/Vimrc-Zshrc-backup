@@ -24,7 +24,7 @@ read -p "Git push? [Y/N]" BFLAG
 
 case $BFLAG in
 	Y | y )
-		git pull
+		# git pull
 
 		git add .
 

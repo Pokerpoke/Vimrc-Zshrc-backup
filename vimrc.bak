@@ -26,12 +26,18 @@ Plugin 'scrooloose/nerdtree'
 " Plugin 'Valloric/YouCompleteMe'
 " 注释
 Plugin 'scrooloose/nerdcommenter'
+" 语法检查
+Plugin 'scrooloose/syntastic'
 " ctrlp
 Plugin 'ctrlpvim/ctrlp.vim'
 " 快速移动
 Plugin 'easymotion/vim-easymotion'
 " Dracula theme
 Plugin 'dracula/vim'
+" python代码缩进
+Plugin 'vim-scripts/indentpython.vim'
+" pep8代码风格检查
+Plugin 'nvie/vim-flake8'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -88,17 +94,53 @@ syntax on
 " let g:solarized_termcolors=256
 
 " 设置背景色
-" set background = light
+set background=dark
 color dracula
 
 " 设置tab长度
 set tabstop=4
+set shiftwidth=4
 
 "突出显示当前行"
 set cursorline        
 
 "突出显示当前列"
-set cursorcolumn        
+" set cursorcolumn        
 
 " 显示匹配的括号
 set showmatch
+
+" 高亮搜索结果
+set hlsearch
+set incsearch
+
+" split navigations 切换窗口布局
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" python代码pep8风格缩进
+" au BufN" ewFile,BufRead *." py
+	" \ set tabstop=4 |
+	" \ set softtabstop=4 |
+	" \ set shiftwidth=4 |
+	" \ set textwidth=79 |
+	" \ set expandtab |
+	" \ set autoindent |
+	" \ set fileformat=unix |
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+
+" 支持utf-8编码
+set encoding=utf-8
+
+" python代码高亮
+let python_highlight_all=1
