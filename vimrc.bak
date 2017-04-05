@@ -95,7 +95,7 @@ syntax on
 
 " 设置背景色
 set background=dark
-color dracula
+color molokai
 
 " 设置tab长度
 set tabstop=4
@@ -121,15 +121,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " python代码pep8风格缩进
-" au BufN" ewFile,BufRead *." py
-	" \ set tabstop=4 |
-	" \ set softtabstop=4 |
-	" \ set shiftwidth=4 |
-	" \ set textwidth=79 |
-	" \ set expandtab |
-	" \ set autoindent |
-	" \ set fileformat=unix |
-
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -144,3 +135,13 @@ set encoding=utf-8
 
 " python代码高亮
 let python_highlight_all=1
+
+" 当光标一段时间保持不动了，就禁用高亮
+autocmd cursorhold * set nohlsearch
+
+" 当输入查找命令时，再启用高亮
+noremap n :set hlsearch<cr>n
+noremap N :set hlsearch<cr>N
+noremap / :set hlsearch<cr>/
+noremap ? :set hlsearch<cr>?
+noremap * *:set hlsearch<cr>

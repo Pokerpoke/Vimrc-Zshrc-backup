@@ -114,3 +114,5 @@ source $ZSH/oh-my-zsh.sh
 
 # cd dirs
   alias cddvbt="cd /home/jiang/Documents/git/dvbtc"
+  alias cddorm="cd /home/jiang/Documents/git/dorm"
+  alias cdgit="cd ~/Documents/git"

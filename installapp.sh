@@ -63,6 +63,20 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
+#install albert
+read -p "install albert? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		sudo add-apt-repository ppa:nilarimogard/webupd8
+		sudo apt-get update
+		sudo apt-get install albert;;
+	N | n )
+		echo "albert won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
 #install sublimetext3
 read -p "install sublimetext3? [Y/N]" IFLAG
 
