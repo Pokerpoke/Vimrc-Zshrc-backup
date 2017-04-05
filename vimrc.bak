@@ -94,17 +94,26 @@ syntax on
 " let g:solarized_termcolors=256
 
 " 设置背景色
+<<<<<<< HEAD
 set background=dark
 color dracula
+=======
+" set background = light
+color molokai
+>>>>>>> 8eb69e2538fbad4550fa9f606b620a76e24ff14c
 
 " 设置tab长度
 set tabstop=4
 set shiftwidth=4
 
-"突出显示当前行"
+" 突出显示当前行
 set cursorline        
 
+<<<<<<< HEAD
 "突出显示当前列"
+=======
+" 突出显示当前列
+>>>>>>> 8eb69e2538fbad4550fa9f606b620a76e24ff14c
 " set cursorcolumn        
 
 " 显示匹配的括号
