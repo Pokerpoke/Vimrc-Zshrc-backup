@@ -1,9 +1,7 @@
 # Vimrc-Zshrc-backup
 
 Backup your vimrc and zshrc and restore at a new installed computer.
-
 * ~~You need to change the name of user in the zshrc.bak otherwise it will get an error.~~
-
 * ~~The installapp.sh should be run as root.~~  
 Don't run the script as run or the .vimrc and .zshrc will own to root.
 
@@ -15,6 +13,7 @@ Don't run the script as run or the .vimrc and .zshrc will own to root.
 * [x] Ask before restore
 * [ ] No need to run PluginInstall in vim
 * [ ] Auto skip installed appliacation
+* [ ] No effection to origin/master when backup
 * [ ] More
 
 # Usage
