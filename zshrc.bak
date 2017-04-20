@@ -95,7 +95,6 @@ source $ZSH/oh-my-zsh.sh
   alias sourcezsh="source ~/.zshrc"
   alias vimvimrc="vim ~/.vimrc"
   alias iftopwlan="sudo iftop -i wlp7s0"
-  alias cddvbtc="cd /home/jiang/Documents/dvbtc"
   alias python="python3"
 
 #ssh
@@ -113,6 +112,9 @@ source $ZSH/oh-my-zsh.sh
   alias djangorunserver="python manage.py runserver 0.0.0.0:8000"
 
 # cd dirs
-  alias cddvbt="cd /home/jiang/Documents/git/dvbtc"
+  alias cddvbtc="cd /home/jiang/Documents/git/dvbtc"
   alias cddorm="cd /home/jiang/Documents/git/dorm"
   alias cdgit="cd ~/Documents/git"
+
+# vim
+  alias vim="vim.nox-py2"

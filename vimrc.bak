@@ -38,6 +38,8 @@ Plugin 'dracula/vim'
 Plugin 'vim-scripts/indentpython.vim'
 " pep8代码风格检查
 Plugin 'nvie/vim-flake8'
+" 代码格式化
+" Plugin 'Chiel92/vim-autoformat'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -95,7 +97,8 @@ syntax on
 
 " 设置背景色
 set background=dark
-color molokai
+color dracula
+" color molokai
 
 " 设置tab长度
 set tabstop=4
