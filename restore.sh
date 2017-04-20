@@ -17,7 +17,7 @@ read -p "Restore zshrc? [Y/N]" IFLAG
 
 case $IFLAG in
 	Y | y )
-		sed -i "5s#.*#\t\texport\ ZSH=/home/$USER/.oh-my-zsh#g" test.bak
+		sed -i "5s#.*#\t\texport\ ZSH=/home/$USER/.oh-my-zsh#g" zshrc.bak
 		cp ./zshrc.bak ~/.zshrc
 		echo "Restore zshrc succeed!";;
 	N | n )
