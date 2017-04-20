@@ -17,6 +17,7 @@ read -p "Restore zshrc? [Y/N]" IFLAG
 
 case $IFLAG in
 	Y | y )
+		sed -i "5s#.*#\t\texport\ ZSH=/home/$USER/.oh-my-zsh#g" test.bak
 		cp ./zshrc.bak ~/.zshrc
 		echo "Restore zshrc succeed!";;
 	N | n )
@@ -38,7 +39,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-# Install Vundle
+# Restore vimrc
 read -p "Restore vimrc? [Y/N]" IFLAG
 
 case $IFLAG in

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Backup .vimrc
 read -p "Backup vimrc? [Y/N]" BFLAG
 
 case $BFLAG in
@@ -10,6 +11,7 @@ case $BFLAG in
 		echo "Vimrc won't backup!";;
 esac
 
+# Backup .zshrc
 read -p "Backup zshrc? [Y/N]" BFLAG
 
 case $BFLAG in
@@ -20,6 +22,7 @@ case $BFLAG in
 		echo "Zshrc won't backup!";;
 esac
 
+# Will push to github or not
 read -p "Git push? [Y/N]" BFLAG
 
 case $BFLAG in
