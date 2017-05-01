@@ -117,4 +117,4 @@ source $ZSH/oh-my-zsh.sh
   alias cdgit="cd ~/Documents/git"
 
 # vim
-  alias vim="vim.nox-py2"
+# alias vim="vim.nox-py2"
