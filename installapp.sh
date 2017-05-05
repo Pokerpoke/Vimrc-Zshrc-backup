@@ -146,6 +146,36 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
+#install arc-theme
+read -p "install arc-theme? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
+		sudo apt-get update 
+		sudo apt-get install -y arc-theme;;
+	N | n )
+		echo "arc-theme won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
+#install vimix-gtk-theme
+read -p "install vimix-gtk-theme? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		git clone https://github.com/vinceliuice/vimix-gtk-themes.git
+		cd vimix-gtk-themes
+		./Vimix-installer.sh
+		cd ..
+		rm -rf vimix-gtk-themes;;
+	N | n )
+		echo "vimix-gtk-theme won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
 #install numix icon theme
 read -p "install numix icon theme? [Y/N]" IFLAG
 
