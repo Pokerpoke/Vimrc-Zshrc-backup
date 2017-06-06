@@ -66,20 +66,6 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install arc-theme
-read -p "install arc-theme? [Y/N]" IFLAG
-
-case $IFLAG in
-	Y | y )
-		sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
-		sudo apt-get update 
-		sudo apt-get install -y arc-theme;;
-	N | n )
-		echo "arc-theme won't install!";;
-	* )
-		echo "error choice!";;
-esac
-
 #install albert
 read -p "install albert? [Y/N]" IFLAG
 
