@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install oh-my-zsh
-read -p "install oh-my-zsh? [Y/N]" IFLAG
+read -p "Install oh-my-zsh? [Y/N]" IFLAG
 
 case $IFLAG in
 	Y | y )
@@ -17,7 +17,7 @@ read -p "Restore zshrc? [Y/N]" IFLAG
 
 case $IFLAG in
 	Y | y )
-		cp ./zshrc.bak ~/.zshrc
+		cp ./zshrc/zshrc.bak ~/.zshrc
 		sed -i "5s#.*#\t\texport\ ZSH=/home/$USER/.oh-my-zsh#g" ~/.zshrc
 		echo "Restore zshrc succeed!";;
 	N | n )
@@ -44,7 +44,7 @@ read -p "Restore vimrc? [Y/N]" IFLAG
 
 case $IFLAG in
 	Y | y )
-		cp ./vimrc.bak ~/.vimrc
+		cp ./vimrc/vimrc.bak ~/.vimrc
 		echo "Restore vimrc succeed!";;
 	N | n )
 		echo "vimrc won't Restore";;

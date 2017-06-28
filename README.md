@@ -3,7 +3,7 @@
 Backup your vimrc and zshrc and restore at a new installed computer.
 * ~~*You need to change the name of user in the zshrc.bak otherwise it will get an error.*~~
 * ~~*The installapp.sh should be run as root.*~~  
-Don't run the script as run or the .vimrc and .zshrc will own to root.
+* Don't run the script as run or the .vimrc and .zshrc will own to root and cause some errors.
 
 * [X] ~~*Add commit message*~~
 * [X] ~~*Add date when commit*~~
@@ -16,21 +16,23 @@ Don't run the script as run or the .vimrc and .zshrc will own to root.
 * [ ] Auto skip installed appliacations
 * [ ] No effection to `origin/master` when backup
 * [ ] Maybe it can be a gui
+- [X] ~~*Now, use a public gist to storge `.vimrc` and `.zshrc` file*~~
 * [ ] More
 
 # Usage
-* Backup
-```shell
-git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
-./backup.sh
-```
 * Restore
 ```shell
 git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
 ./restore.sh
 ```
 
-* Automatic install application
+* Backup
+```shell
+git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
+./backup.sh
+```
+
+* Automatic install some application
 ```shell
 git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
 ./installapp.sh
@@ -60,5 +62,5 @@ git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
 * powerline fonts
 * vscode
 * numix icon theme
-* sogou input
+* ~~*sogou input*~~
 * oh-my-zsh
