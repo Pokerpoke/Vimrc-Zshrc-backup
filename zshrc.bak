@@ -104,7 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # ssh
   alias sshdigital4="ssh jiang@104.131.136.115"
   alias sshdigital6="ssh jiang@2604:a880:1:20::424:7001"
-  alias sshpi="ssh pi@192.168.199.205"
+  # alias sshpi="ssh pi@192.168.199.205"
+  alias sshpi="ssh pi@192.168.1.117"
   alias sshpi2="ssh pi@192.168.199.123"
   alias sshhiwifi="ssh root@192.168.199.1 -p 1022"
   alias sshpiyang="ssh jiang@192.168.199.144"

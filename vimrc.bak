@@ -97,8 +97,8 @@ syntax on
 
 " 设置背景色
 set background=dark
-color dracula
-" color molokai
+" color dracula
+color molokai
 
 " 设置tab长度
 set tabstop=4
