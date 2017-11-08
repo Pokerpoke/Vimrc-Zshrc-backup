@@ -60,5 +60,7 @@ git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
 * powerline fonts
 * vscode
 * numix icon theme
+* Azure-theme
+* Blue Paper icon theme for Azure
 * sogou input
 * oh-my-zsh

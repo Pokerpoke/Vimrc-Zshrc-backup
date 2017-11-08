@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#
-# apt-get update
+sudo apt-get update
 
 fuser=$USER
 
@@ -154,6 +153,40 @@ case $IFLAG in
 		sudo add-apt-repository ppa:numix/ppa
 		sudo apt-get update
 		sudo apt-get install numix-icon-theme
+		echo "install success!";;
+	N | n )
+		echo "vscode won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
+#install Azure-theme
+read -p "install Azure-theme? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		git clone https://github.com/vinceliuice/Azure-theme.git
+		cd Azure-theme
+		./Install
+		cd ..
+		rm -rf Azure-theme
+		echo "install success!";;
+	N | n )
+		echo "vscode won't install!";;
+	* )
+		echo "error choice!";;
+esac
+
+#install Blue Paper icon theme for Azure
+read -p "install Blue Paper icon theme for Azure? [Y/N]" IFLAG
+
+case $IFLAG in
+	Y | y )
+		git clone https://github.com/vinceliuice/Azure-theme.git
+		cd Azure-theme
+		./Install-Paper-Azure
+		cd ..
+		rm -rf Azure-theme
 		echo "install success!";;
 	N | n )
 		echo "vscode won't install!";;
