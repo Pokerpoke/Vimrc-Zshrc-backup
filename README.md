@@ -14,7 +14,7 @@ Don't run the script as run or the .vimrc and .zshrc will own to root.
 * [ ] Add an install all choice
 * [ ] No need to run PluginInstall in vim
 * [ ] Auto skip installed appliacations
-* [ ] No effection to `origin/master` when backup
+~~* [ ] No effection to `origin/master` when backup~~
 * [ ] Maybe it can be a gui
 * [ ] More
 
@@ -45,6 +45,7 @@ git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
 * tree
 * uget
 * unity-tweak-tool
+* gnome-tweak-tool
 * indicator-multiload
 * cmake
 * powerline
@@ -63,4 +64,6 @@ git clone https://github.com/Pokerpoke/Vimrc-Zshrc-backup
 * Azure-theme
 * Blue Paper icon theme for Azure
 * sogou input
-* oh-my-zsh
+* oh-my-zsh 
+* Azure-theme
+* Blue Paper icon theme

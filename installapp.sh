@@ -4,7 +4,6 @@ sudo apt-get update
 
 fuser=$USER
 
-
 apps=(
 	"chromium-browser"
 	"git"
@@ -13,7 +12,8 @@ apps=(
 	"htop"
 	"tree"
 	"uget"
-	"unity-tweak-tool"
+	# "unity-tweak-tool"
+	"gnome-tweak-tool"
 	"indicator-multiload"
 	"cmake"
 	"powerline"
@@ -39,7 +39,7 @@ for name in ${apps[@]}; do
 	
 done
 
-#install vlc
+# install vlc
 read -p "install vlc? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -51,7 +51,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install shadowsocks-qt5
+# install shadowsocks-qt5
 read -p "install shadowsocks-qt5? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -65,7 +65,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install arc-theme
+# install arc-theme
 read -p "install arc-theme? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -79,7 +79,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install albert
+# install albert
 read -p "install albert? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -93,7 +93,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install sublimetext3
+# install sublimetext3-3126
 read -p "install sublimetext3? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -108,7 +108,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install powerline fonts
+# install powerline fonts
 read -p "install powerline fonts? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -128,7 +128,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install vscode
+# install vscode
 read -p "install vscode? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -145,7 +145,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install numix icon theme
+# install numix icon theme
 read -p "install numix icon theme? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -160,7 +160,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install Azure-theme
+# install Azure-theme
 read -p "install Azure-theme? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -168,6 +168,20 @@ case $IFLAG in
 		git clone https://github.com/vinceliuice/Azure-theme.git
 		cd Azure-theme
 		./Install
+
+			#install Blue Paper icon theme for Azure
+			read -p "install Blue Paper icon theme for Azure? [Y/N]" IFLAG
+
+			case $IFLAG in
+				Y | y )
+					./Install-Paper-Azure
+					echo "install success!";;
+				N | n )
+					echo "vscode won't install!";;
+				* )
+					echo "error choice!";;
+			esac
+
 		cd ..
 		rm -rf Azure-theme
 		echo "install success!";;
@@ -177,24 +191,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install Blue Paper icon theme for Azure
-read -p "install Blue Paper icon theme for Azure? [Y/N]" IFLAG
-
-case $IFLAG in
-	Y | y )
-		git clone https://github.com/vinceliuice/Azure-theme.git
-		cd Azure-theme
-		./Install-Paper-Azure
-		cd ..
-		rm -rf Azure-theme
-		echo "install success!";;
-	N | n )
-		echo "vscode won't install!";;
-	* )
-		echo "error choice!";;
-esac
-
-#install sogou input
+# install sogou input
 read -p "install sougou input? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -208,7 +205,7 @@ case $IFLAG in
 		echo "error choice!";;
 esac
 
-#install oh-my-zsh
+# install oh-my-zsh
 read -p "install oh-my-zsh? [Y/N]" IFLAG
 
 case $IFLAG in
@@ -219,5 +216,8 @@ case $IFLAG in
 	* )
 		echo "error choice";;
 esac
+
+# restore vimrc and zshrc
+./restore.sh
 
 exit 0
