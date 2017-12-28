@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install oh-my-zsh
-read -p "install oh-my-zsh? [Y/N]" IFLAG
+read -p "Install oh-my-zsh? [Y/N]" IFLAG
 
 case $IFLAG in
 	Y | y )

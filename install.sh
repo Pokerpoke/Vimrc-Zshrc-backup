@@ -192,18 +192,18 @@ case $IFLAG in
 esac
 
 # install sogou input
-read -p "install sougou input? [Y/N]" IFLAG
+# read -p "install sougou input? [Y/N]" IFLAG
 
-case $IFLAG in
-	Y | y )
-		sudo add-apt-repository ppa:fcitx-team/nightly  #添加源
-		sudo apt-get install fcitx sogoupinyin          #安装 fcitx 和搜狗拼音
-		echo "install success!";;
-	N | n )
-		echo "sogou input won't install!";;
-	* )
-		echo "error choice!";;
-esac
+# case $IFLAG in
+# 	Y | y )
+# 		sudo add-apt-repository ppa:fcitx-team/nightly  #添加源
+# 		sudo apt-get install fcitx sogoupinyin          #安装 fcitx 和搜狗拼音
+# 		echo "install success!";;
+# 	N | n )
+# 		echo "sogou input won't install!";;
+# 	* )
+# 		echo "error choice!";;
+# esac
 
 # install oh-my-zsh
 read -p "install oh-my-zsh? [Y/N]" IFLAG

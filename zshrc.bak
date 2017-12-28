@@ -106,8 +106,6 @@ source $ZSH/oh-my-zsh.sh
   alias python="python3"
 
 # ssh
-  alias sshdigital4="ssh jiang@104.131.136.115"
-  alias sshdigital6="ssh jiang@2604:a880:1:20::424:7001"
   # alias sshpi="ssh pi@192.168.199.205"
   alias sshpi="ssh pi@192.168.0.7"
   # alias sshpi2="ssh pi@192.168.199.123"
