@@ -19,6 +19,7 @@ case $IFLAG in
 	Y | y )
 		cp ./zshrc.bak ~/.zshrc
 		sed -i "5s#.*#\t\texport\ ZSH=/home/$USER/.oh-my-zsh#g" ~/.zshrc
+		sed -i "8s#.*#\t\texport\ ZSH=/home/$USER/.oh-my-zsh#g" ~/.zshrc
 		echo "Restore zshrc succeed!";;
 	N | n )
 		echo "zshrc won't Restore";;
