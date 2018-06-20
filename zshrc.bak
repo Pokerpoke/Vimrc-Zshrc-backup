@@ -146,8 +146,8 @@ source $ZSH/oh-my-zsh.sh
   alias pc="sudo picocom -b 115200 /dev/ttyUSB0"
   alias mc="sudo minicom"
 
-  export SVGA_VGPU10=0
-  source /opt/ros/lunar/setup.zsh
+# export SVGA_VGPU10=0
+# source /opt/ros/lunar/setup.zsh
 
 # ROS
   # alias gazebo="source ~/.zshrc && gazebo"
