@@ -1,5 +1,7 @@
 # Vimrc-Zshrc-backup
 
+[![Build Status](https://travis-ci.org/Pokerpoke/dotfiles.svg?branch=master)](https://travis-ci.org/Pokerpoke/dotfiles)
+
 Backup your vimrc and zshrc and restore at a new installed computer.
 
 * ~~*You need to change the name of user in the zshrc.bak otherwise it will get an error.*~~
