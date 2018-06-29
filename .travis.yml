@@ -1,5 +1,5 @@
 language: bash
-scritps:
+scritp:
   - bash install.sh
   - bash restore.sh
   - bash backup.sh
