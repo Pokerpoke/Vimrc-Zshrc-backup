@@ -17,5 +17,5 @@ echo -e "${GREEN}Installing vundle.${NC}"
 rsync ${SCRIPT_DIR}/src/vim/.vimrc ~/.vimrc
 echo -e "${GREEN}Restored vimrc.${NC}"
 
-rsync -R ${SCRIPT_DIR}/src/i3/config ~/.config/i3/config
+rsync ${SCRIPT_DIR}/src/i3/config ~/.config/i3/config
 echo -e "${GREEN}Restored i3wm-config.${NC}"

@@ -18,7 +18,6 @@ apps=(
 	"tree"
 	"gnome-tweak-tool"
 	"cmake"
-	"powerline"
 	"curl"
 	"aria2"
     "python-pip"
