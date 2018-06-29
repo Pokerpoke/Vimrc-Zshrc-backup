@@ -1,5 +1,5 @@
-language: python
+language: bash
 scritps:
-  - ./install.sh
-  - ./restore.sh
-  - ./backup.sh
+  - bash ./install.sh
+  - bash ./restore.sh
+  - bash ./backup.sh
