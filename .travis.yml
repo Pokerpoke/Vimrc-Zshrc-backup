@@ -1,3 +1,4 @@
+language: python
 scritps:
   - ./install.sh
   - ./restore.sh
