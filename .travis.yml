@@ -1,0 +1,4 @@
+scritps:
+  - ./install.sh
+  - ./restore.sh
+  - ./backup.sh
