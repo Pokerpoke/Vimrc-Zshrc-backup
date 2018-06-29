@@ -2,10 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$HOME/arm-linux/4.5.1/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export PATH=$HOME/jiang/FriendlyARM/toolschain/4.5.1/bin:$PATH
-		export ZSH=/home/jiang/.oh-my-zsh
 
 # Path to your oh-my-zsh installation.
-		export ZSH=/home/jiang/.oh-my-zsh
+export ZSH=/home/${USER}/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -85,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # Example aliases
   alias zshconfig="vim ~/.zshrc"
   alias ohmyzsh="vim ~/.oh-my-zsh"
@@ -103,13 +102,9 @@ source $ZSH/oh-my-zsh.sh
   alias psaux="ps -aux | grep"
   alias lsgrep="ls | grep"
   alias netstagrep="netstat -apn | grep"
-  alias python="python3"
 
 # ssh
-  # alias sshpi="ssh pi@192.168.199.205"
-  alias sshpi="ssh pi@192.168.0.7"
-  # alias sshpi2="ssh pi@192.168.199.123"
-  alias sshpi2="ssh pi@192.168.1.111"
+  alias sshpi="ssh pi@192.168."
   alias sshhiwifi="ssh root@192.168.199.1 -p 1022"
   alias sshpiyang="ssh jiang@192.168.199.144"
 
@@ -141,6 +136,10 @@ source $ZSH/oh-my-zsh.sh
 # proxy
   alias hp="export http_proxy=socks5://127.0.0.1:1080 &&
 			export https_proxy=socks5://127.0.0.1:1080"
+  alias ss="sudo sslocal -c /etc/shadowsocks/config.json"
+  alias ssd="sudo sslocal -c /etc/shadowsocks/config.json -d start"
+  alias gitproxy="git config --global http.proxy 'socks5://127.0.0.1:1080' "
+  alias gitunproxy="git config --global --unset http.proxy "
 
 # arm serial port
   alias pc="sudo picocom -b 115200 /dev/ttyUSB0"

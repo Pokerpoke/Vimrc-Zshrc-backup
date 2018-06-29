@@ -1,49 +1,27 @@
 #!/bin/bash
+set -e
 
-# Backup .vimrc
-read -p "Backup vimrc? [Y/N]" BFLAG
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-case $BFLAG in
-	Y | y )
-		cp ~/.vimrc ./vimrc.bak
-		echo "Backup vimrc succed!";;
-	N | n )
-		echo "Vimrc won't backup!";;
-esac
+SCRIPT_DIR=$(dirname $(readlink -f $0))
 
-# Backup .zshrc
-read -p "Backup zshrc? [Y/N]" BFLAG
+function backup()
+{
+    if [ -f $1 ] 
+    then
+        rsync $1 $2
+        echo "$1 backuped."
+    else
+        echo -e "${RED}File doesn't exists!$NC}"
+    fi
+}
 
-case $BFLAG in
-	Y | y )
-		cp ~/.zshrc ./zshrc.bak
-		echo "Backup zshrc succed!";;
-	N | n )
-		echo "Zshrc won't backup!";;
-esac
+backup ~/.zshrc ${SCRIPT_DIR}/src/oh-my-zsh/.zshrc
+sed -i "7s#.*#export\ ZSH=/home/\${USER}/.oh-my-zsh#g" ${SCRIPT_DIR}/src/oh-my-zsh/.zshrc
 
-# Will push to github or not
-read -p "Git push? [Y/N]" BFLAG
+backup ~/.vimrc ${SCRIPT_DIR}/src/vim/.vimrc
 
-case $BFLAG in
-	Y | y )
-		# git pull
-
-		git add .
-
-		date1=$(date +%Y%m%d)
-
-		read -p "Input commit:" COMMIT
-
-		if [[ $COMMIT == "" ]]; then
-			git commit -m "Backup! --- $date1"
-		else
-			git commit -m "$COMMIT --- $date1"
-		fi
-
-		git push origin
-
-		echo "Git push succed!";;
-	N | n )
-		echo "Skip git push";;
-esac
+backup ~/.config/i3/config ${SCRIPT_DIR}/src/i3/config
