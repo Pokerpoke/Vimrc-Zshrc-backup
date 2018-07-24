@@ -23,6 +23,9 @@ apps=(
     "python-pip"
     "supervisor"
     "i3"
+	"feh"
+    "rofi"
+    "compton"
 	)
 
 for name in ${apps[@]}; do
@@ -31,11 +34,6 @@ done
 
 # shadowsocks
 sudo pip install shadowsocks
-
-# install arc-theme
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
-sudo apt-get update 
-sudo apt-get install -y arc-theme
 
 # install vscode
 read -p "install vscode? [Y/N]" IFLAG
@@ -52,55 +50,3 @@ echo -e "${GREEN}Installed oh-my-zsh.${NC}"
 
 # restore vimrc and zshrc
 ${SCRIPT_DIR}/restore.sh
-
-# install powerline fonts
-# read -p "install powerline fonts? [Y/N]" IFLAG
-
-# case $IFLAG in
-# 	Y | y )
-# 		# clone
-# 		git clone https://github.com/powerline/fonts.git
-# 		# install
-# 		cd fonts
-# 		./install.sh
-# 		# clean-up a bit
-# 		cd ..
-# 		rm -rf fonts
-# 		echo "install success!";;
-# 	N | n )
-# 		echo "powerline fonts won't install!";;
-# 	* )
-# 		echo "error choice!";;
-# esac
-
-
-# install Azure-theme
-# read -p "install Azure-theme? [Y/N]" IFLAG
-
-# case $IFLAG in
-# 	Y | y )
-# 		git clone https://github.com/vinceliuice/Azure-theme.git
-# 		cd Azure-theme
-# 		./Install
-
-# 			#install Blue Paper icon theme for Azure
-# 			read -p "install Blue Paper icon theme for Azure? [Y/N]" IFLAG
-
-# 			case $IFLAG in
-# 				Y | y )
-# 					./Install-Paper-Azure
-# 					echo "install success!";;
-# 				N | n )
-# 					echo "vscode won't install!";;
-# 				* )
-# 					echo "error choice!";;
-# 			esac
-
-# 		cd ..
-# 		rm -rf Azure-theme
-# 		echo "install success!";;
-# 	N | n )
-# 		echo "vscode won't install!";;
-# 	* )
-# 		echo "error choice!";;
-# esac
