@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 RED='\033[0;31m'
@@ -18,6 +18,3 @@ echo -e "${GREEN}Installing vundle.${NC}"
 
 rsync -r ${SCRIPT_DIR}/src/vim/.vimrc ~/.vimrc
 echo -e "${GREEN}Restored vimrc.${NC}"
-
-rsync -r ${SCRIPT_DIR}/src/i3/config ~/.config/i3/config
-echo -e "${GREEN}Restored i3wm-config.${NC}"

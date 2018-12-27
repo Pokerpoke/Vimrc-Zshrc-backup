@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 RED='\033[0;31m'
@@ -23,5 +23,3 @@ backup ~/.zshrc ${SCRIPT_DIR}/src/oh-my-zsh/.zshrc
 sed -i "7s#.*#export\ ZSH=/home/\${USER}/.oh-my-zsh#g" ${SCRIPT_DIR}/src/oh-my-zsh/.zshrc
 
 backup ~/.vimrc ${SCRIPT_DIR}/src/vim/.vimrc
-
-backup ~/.config/i3/config ${SCRIPT_DIR}/src/i3/config

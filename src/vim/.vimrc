@@ -74,7 +74,7 @@ filetype plugin indent on    " required
 nmap <F5> :NERDTreeToggle<cr>
 
 " 显示行号
-set nu
+" set nu
 
 " 设置airline主题
 let g:airline_theme='molokai'

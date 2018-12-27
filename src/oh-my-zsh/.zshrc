@@ -90,6 +90,7 @@ source $ZSH/oh-my-zsh.sh
   alias ohmyzsh="vim ~/.oh-my-zsh"
   alias aptinstall="sudo apt install"
   alias aptsearch="sudo apt-cache search"
+  alias aptshow="sudo apt show"
   alias aptupdate="sudo apt update"
   alias aptupgrade="sudo apt upgrade"
   alias aptfixmissing="sudo apt install --fix-missing"
@@ -136,6 +137,7 @@ source $ZSH/oh-my-zsh.sh
 # proxy
   alias hp="export http_proxy=socks5://127.0.0.1:1080 &&
 			export https_proxy=socks5://127.0.0.1:1080"
+  alias unproxy="unset all_proxy"
   alias ss="sudo sslocal -c /etc/shadowsocks/config.json"
   alias ssd="sudo sslocal -c /etc/shadowsocks/config.json -d start"
   alias gitproxy="git config --global http.proxy 'socks5://127.0.0.1:1080' "

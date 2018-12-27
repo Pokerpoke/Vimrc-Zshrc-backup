@@ -16,7 +16,6 @@ apps=(
     "vim"
     "htop"
     "tree"
-    "gnome-tweak-tool"
     "cmake"
     "curl"
     "aria2"
@@ -26,6 +25,16 @@ apps=(
     "supervisor"
     "uget"
     "shutter"
+    "chrome-gnome-shell"
+    "arc-theme"
+    "numix-gtk-theme"
+    "numix-icon-theme"
+    "gnome-tweak-tool"
+    "gnome-shell-extensions"
+    "gnome-shell-extensions-gpaste"
+    "gnome-shell-extension-dashtodock"
+    "gnome-shell-extension-pixelsaver"
+    "gnome-shell-extension-system-monitor"
     )
 
 for name in ${apps[@]}; do
